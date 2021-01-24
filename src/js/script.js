@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const mainLogo = document.getElementById('logo');
   console.log(mainLogo);
-  mainLogo.addEventListener('click', => window.scrollTo({top: 0, behavior: 'smooth'}));
+  mainLogo.addEventListener('click', () => { window.scrollTo({top: 0, behavior: 'smooth'}) });
 
   //Smooth Scrolling Using Navigation Menu
 
