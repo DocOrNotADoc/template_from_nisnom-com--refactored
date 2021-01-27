@@ -1,10 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
   
+  // multi-used variables
+  
+  const mainLogo = document.getElementById('logo');
+
+
   // Click logo to scroll to top
 
-  const mainLogo = document.getElementById('logo');
-  console.log(mainLogo);
   mainLogo.addEventListener('click', () => { window.scrollTo({top: 0, behavior: 'smooth'}) });
+
 
   //Smooth Scrolling Using Navigation Menu
 
@@ -24,4 +28,29 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // header shifting
+  const header = document.querySelector('.header'),
+    brand = document.querySelector('.header'),
+    wordMark = document.getElementById('word-mark');
+
+    let shiftChanges = [];
+    shiftChanges.push(header);
+    shiftChanges.push(brand);
+    shiftChanges.push(mainLogo);
+    shiftChanges.push(wordMark);
+
+  window.addEventListener("scroll", callbackFunc);
+    function callbackFunc() {
+      let y = window.pageYOffset;
+
+      for (let i = 0; i < shiftChanges.length; i++) {
+
+        
+        if (y > 150) {
+          shiftChanges[i].classList.add("navShadow");
+        } else {
+          shiftChanges[i].classList.remove("navShadow");
+        }
+      }
+    }
 });
