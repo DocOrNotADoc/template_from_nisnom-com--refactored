@@ -65,5 +65,6 @@ window.addEventListener('DOMContentLoaded', () => {
     togglableLinksList.classList.toggle('showMenu');
   });
 
+  // close menu ONLY on click "X". it`s a BETA version
   
 });

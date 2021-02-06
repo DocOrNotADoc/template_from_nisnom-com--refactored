@@ -200,29 +200,35 @@ section {
   #menu-toggle {
     display: flex;
   }
-  ul {
+  #menu-header {
     display: inline-block;
+    max-width: 90%;
+    border-radius: .7rem;
     @include object(100vw,0,$aqua);
     @include transPos(160px,null,null,null,null,null);
     box-shadow: 0 5px 30px -4px rgba(#000, 0.2);
     transition: all 0.3s;
     &.showMenu {
-      height: 250px;
+      height: 240px;
       li {
-        height: 80px;
+        height: 70px;
         opacity: 1;
         visibility: visible;
       }
     }
   }
   li {
-    @include object(50%,80px,null);
+    display: flex;
+    justify-content: center;
+    @include object(50%,70px,null);
     float: left;
-    padding-left: 40px;
     opacity: 0;
     visibility: hidden;
     margin-left: 0;
     transition: all 0.3s 0.1s;
+    a {
+      width: 50%;
+    }
     &:first-child,
     &:nth-child(2) {
       margin-top: 80px;
@@ -240,3 +246,5 @@ section {
   font-size: 30px;
   color: #fff;
 }
+
+// this styles have very sinple adaptation('@media'). It`s a BETA version

@@ -61,13 +61,9 @@ window.addEventListener('DOMContentLoaded', () => {
     togglableLinksList = document.getElementById('menu-header');
     // togglableLinksList.addEventListener('click', () => { window.scrollTo({top: 0, behavior: 'smooth'}) });
   toggleMenuButton.addEventListener('click', () => {
-
-    // if (toggleMenuButton.contains('closeMenu')) 
-
     toggleMenuButton.classList.toggle('closeMenu');
     togglableLinksList.classList.toggle('showMenu');
   });
 
   
-
 });
